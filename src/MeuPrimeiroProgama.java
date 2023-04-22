@@ -1,26 +1,29 @@
 public class MeuPrimeiroProgama {
 
-    // Ponto de entrada/Entry-point -> É o ponto onde todos os sistemas procuram no projeto
-    // para começar a inicialização dele. Nele, podemos armazenar propriedades e variáveis.
-
-    // Propriedades/variáveis -> Será onde iremos armazenar dados para manipulá-los no futuro.
     public static void main(String[] args) {
-        System.out.println(2 + 2); // Imprime um cálculo de soma de 2 + 2
-        System.out.println(2 + 6); // Imprime um cálculo de soma de 2 + 6
-        System.out.println("Texto"); // Imprime "Texto" na tela
+        // Variáveis -> tipo: Texto (String)
+        // Variáveis -> tipo: Números inteiros (Int)
+        // Variáveis -> tipo: Números reais (Double)
+        // Variáveis -> tipo: Booleans (true | false)
 
-        // Ativa/executa o método "minhaInstrucaoDeImprimir" e "calcular_divisao"
-        minhaInstrucaoDeImprimir();
+        // TIPOS DE DADOS
+        String login = "Olá"; // Representação de texto (ASCII)
+        // int number1 = 10; // Representação de números inteiros
+        double percent = 24.33; // Representação de números fracionados
+        boolean isDriver = true; // Representação booleana (estado verdadeiro ou falso)
 
-        calcular_divisao();
+        System.out.println(login);
+        System.out.println(percent);
+        System.out.println(isDriver);
+
+        int number1; // Declarando a variável
+        number1 = 55;
+
+        System.out.println(number1 + 10);
+
+        // Variáveis
+
+        // São espaços de memória alocados a qual são representados por tipos.
     }
 
-    // Métodos/Funções: São instruções definidas para o programa executar
-    static void minhaInstrucaoDeImprimir() {
-        System.out.println("Olá, mundo!. Eu sou o primeiro programa do Dávilos em Java!!!");
-    }
-
-    static void calcular_divisao() {
-        System.out.println(10 / 3); // Imprime um cálculo de divisão (não exata) de 10 / 3
-    }
 }
