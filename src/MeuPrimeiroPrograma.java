@@ -8,7 +8,7 @@ public class MeuPrimeiroPrograma {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Diga seu nome: ");
-        String nome = input.next();
+        String nome = input.nextLine();
 
         diz_ola(nome);
 
