@@ -27,22 +27,22 @@ public class MeuPrimeiroPrograma {
         if (imc < 16.0) {
             System.out.println("Magreza Grau III");
         }
-        else if (imc >= 16.0 && imc <= 16.9) {
+        else if (imc >= 16.0 && imc <= 16.99) {
             System.out.println("Magreza Grau II");
         }
-        else if (imc >= 17.0 && imc <= 18.4) {
+        else if (imc >= 17.0 && imc <= 18.49) {
             System.out.println("Magreza Grau I");
         }
-        else if (imc >= 18.5 && imc <= 24.9) {
+        else if (imc >= 18.5 && imc <= 24.99) {
             System.out.println("Adequado");
         }
-        else if (imc >= 25.0 && imc <= 29.9) {
-            System.out.println("Pré-obeso");
+        else if (imc >= 25.0 && imc <= 29.99) {
+            System.out.print("Pre-obeso");
         }
-        else if (imc >= 30.0 && imc <= 34.9) {
+        else if (imc >= 30.0 && imc <= 34.99) {
             System.out.println("Obesidade Grau I");
         }
-        else if (imc >= 35.0 && imc <= 39.9) {
+        else if (imc >= 35.0 && imc <= 39.99) {
             System.out.println("Obesidade Grau II");
         }
         else {
