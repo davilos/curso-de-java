@@ -129,6 +129,24 @@ public class CondicionaisExemplo {
             case 3 -> "Produto 3";
             default -> throw new IllegalStateException("Unexpected value: " + codigoProduto);
             // Valor default gerado automaticamente pela IDEA
+        };
+
+            // Switch expression com yield
+        String mensagem = switch (codigoProduto) {
+            case 1 -> {
+                System.out.println("Produto 1");
+                yield "produto 1";
+            }
+            case 2 -> {
+                System.out.println("Produto 2");
+                yield "produto 1";
+            }
+            case 3 -> {
+                System.out.println("Produto 3");
+                yield "produto 1";
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + codigoProduto);
+            // Valor default gerado automaticamente pela IDEA
         };*/
     }
 }
