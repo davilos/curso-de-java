@@ -55,7 +55,7 @@ public class RepeticoesExemplo {
         //Exemplo de estrutura simples
         boolean desejaRepetir = true;
 
-        Scanner leitor = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         String nome;
         byte idade;
@@ -63,15 +63,22 @@ public class RepeticoesExemplo {
         while (desejaRepetir) {
             System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.print("Digite o nome do usuário: ");
-            nome = leitor.next();
+            nome = scanner.nextLine();
 
             System.out.print("Digite a idade do usuário: ");
-            idade = leitor.nextByte();
+            idade = scanner.nextByte();
+            scanner.nextLine(); // consome o caractere de nova linha "\n"
+
+            /*
+                O nextInt() ou nextByte() não consumem o caractere de nova linha,
+                por isso acaba tendo o erro de pular o nextLine(), pois é ele que vai
+                receber o "\", e, por isso ele acaba não recebendo a entrada do usuário.
+            */
 
             System.out.println("\n" + nome + " têm " + idade + " anos!\n");
 
             System.out.print("Quer continuar? ");
-            desejaRepetir = leitor.nextBoolean();
+            desejaRepetir = scanner.nextBoolean();
         }
 
         //======================================================================
