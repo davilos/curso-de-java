@@ -66,8 +66,10 @@ public class OrientacaoObjetos {
         Pessoa objetoPessoa = new Pessoa();
 
         //Mudando as informações do objeto
-        objetoPessoa.peso = 67.3f;
-        objetoPessoa.altura = 1.67f;
+        objetoPessoa.setPeso(0f);
+        objetoPessoa.setAltura(1.67f);
+
+        System.out.println(objetoPessoa.getPeso()+ " " + objetoPessoa.getAltura());
 
         //Solicitando que a pessoa calcule seu IMC
         float imcPessoa = objetoPessoa.calcularIMC();
