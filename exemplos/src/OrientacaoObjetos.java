@@ -63,11 +63,11 @@ public class OrientacaoObjetos {
         */
 
         // Criação do objeto
-        Pessoa objetoPessoa = new Pessoa();
+        Pessoa objetoPessoa = new Pessoa(70F, 1.70F);
 
         //Mudando as informações do objeto
-        objetoPessoa.setPeso(0f);
-        objetoPessoa.setAltura(1.67f);
+        objetoPessoa.setPeso(60F);
+        objetoPessoa.setAltura(1.67F);
 
         System.out.println(objetoPessoa.getPeso()+ " " + objetoPessoa.getAltura());
 
