@@ -6,7 +6,7 @@ public class Vendedor extends Funcionario {
     private float comissaoPorItem;
 
     public Vendedor() {
-
+        super();
     }
 
 }
