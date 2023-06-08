@@ -10,6 +10,13 @@ public class Funcionario {
     private float salario;
     SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
+    public Funcionario(String nome, String cpf, String dataNascimento, float salario) throws ParseException {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = format.parse(dataNascimento);
+        this.salario = salario;
+    }
+
     public String getNome() {
         return nome;
     }
