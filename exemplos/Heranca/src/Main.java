@@ -6,33 +6,34 @@ public class Main {
         Main mainInstance = new Main();
         mainInstance.criarVendedor();
 
-        Motorista m = new Motorista();
+        Motorista m = new Motorista("Pedro", "123123123", "20/05/2000", 1500.0f,
+                "Gol", 15);
     }
 
     public void criarVendedor() throws ParseException {
         Scanner scanner = new Scanner(System.in);
-        Vendedor v = new Vendedor();
 
         System.out.print("Digite o nome do vendedor: ");
-        v.setNome(scanner.nextLine());
-
-        System.out.print("Digite o salário do vendedor: ");
-        v.setSalario(scanner.nextFloat());
+        String nome = scanner.nextLine();
 
         System.out.print("Digite o cpf do vendedor: ");
-        v.setCpf(scanner.next());
+        String cpf = scanner.next();
 
         System.out.print("Digite a data de nascimento do vendedor: ");
-        v.setDataNascimento(scanner.next());
+        String dataNascimento = scanner.next();
 
-        System.out.print("Digite a comissão do vendedor: ");
-        v.setComissaoPorItem(scanner.nextFloat());
+        System.out.print("Digite o salário do vendedor: ");
+        float salario = scanner.nextFloat();
 
         System.out.print("Digite o total de itens vendidos do vendedor: ");
-        v.setTotalItensVendidos(scanner.nextInt());
+        int totalItens = scanner.nextInt();
 
-        System.out.println("O salário do vendedor é " + v.calcularSalario() + "data: " + v.getDataNascimento());
+        System.out.print("Digite a comissão do vendedor: ");
+        float comissao = scanner.nextFloat();
 
+        Vendedor v = new Vendedor(nome, cpf, dataNascimento, salario, totalItens, comissao);
+
+        System.out.println("O salário do vendedor é " + v.getSalario() + "\ndata: " + v.getDataNascimento());
     }
 
 }
