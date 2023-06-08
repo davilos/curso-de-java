@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Motorista extends Funcionario {
 
     private String nomeCarro;
@@ -7,5 +5,21 @@ public class Motorista extends Funcionario {
 
     public Motorista() {
         super();
+    }
+
+    public String getNomeCarro() {
+        return nomeCarro;
+    }
+
+    public void setNomeCarro(String nomeCarro) {
+        this.nomeCarro = nomeCarro;
+    }
+
+    public int getTotalViagensFeitas() {
+        return totalViagensFeitas;
+    }
+
+    public void setTotalViagensFeitas(int totalViagensFeitas) {
+        this.totalViagensFeitas = totalViagensFeitas;
     }
 }
