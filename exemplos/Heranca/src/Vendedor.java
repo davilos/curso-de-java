@@ -1,13 +1,20 @@
+import java.text.ParseException;
+import java.util.Date;
+
 public class Vendedor extends Funcionario {
 
     private int totalItensVendidos;
     private float comissaoPorItem;
 
-    public Vendedor() {
-        super();
+    public Vendedor(String nome, String cpf, String dataNascimento, float salario, int totalItensVendidos,
+                    float comissaoPorItem) throws ParseException {
+        super(nome, cpf, dataNascimento, salario);
+        this.totalItensVendidos = totalItensVendidos;
+        this.comissaoPorItem = comissaoPorItem;
     }
 
-    public float calcularSalario() {
+    @Override
+    public float getSalario() {
         return super.getSalario() + (comissaoPorItem * totalItensVendidos);
     }
 
