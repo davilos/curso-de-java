@@ -1,3 +1,5 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Funcionario {
@@ -6,6 +8,7 @@ public class Funcionario {
     private String cpf;
     private Date dataNascimento;
     private float salario;
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
     public String getNome() {
         return nome;
@@ -27,8 +30,8 @@ public class Funcionario {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setDataNascimento(String dataNascimento) throws ParseException {
+        this.dataNascimento = format.parse(dataNascimento);
     }
 
     public float getSalario() {
